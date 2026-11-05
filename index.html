@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>HN Construcciones · Reformas e impermeabilización en Barcelona</title>
+<meta name="description" content="Grupo Hélio Nil Construcciones y Reformas, S.L. Impermeabilización de cubiertas y terrazas, reformas integrales, baños, cocinas y suelos en Barcelona. Presupuesto por WhatsApp: 658 911 503.">
+<meta name="theme-color" content="#0A1733">
+<link rel="icon" href="img/logo-sm.webp">
+<link rel="preload" href="fonts/geist-sans-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:title" content="HN Construcciones · Reformas e impermeabilización en Barcelona">
+<meta property="og:image" content="img/bath.webp">
+<style>
+@font-face{font-family:"Geist";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/geist-sans-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Geist";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/geist-sans-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Geist";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/geist-sans-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Geist Mono";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/geist-mono-latin-500-normal.woff2) format("woff2")}
+:root{
+  --navy:#0A1733;--navy2:#12224A;--navy3:#1B2F5E;--blue:#1F55E6;--blue2:#3D6FF2;--sky:#E8EEFB;
+  --paper:#F4F5F7;--white:#FFFFFF;--ink:#0B1222;--ink2:#4E5668;--ink3:#8B93A3;--line:#DCE0E7;--steel:#B9C1CE;
+  --wa:#1F55E6;
+  --sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"Geist Mono",ui-monospace,monospace;
+  --r:28px;--wrap:1240px;--ease:cubic-bezier(.2,.7,.2,1)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.55 var(--sans);letter-spacing:-.006em;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:none;border:0;cursor:pointer;padding:0}
+:focus-visible{outline:2px solid var(--blue2);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:-999px;top:12px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:99px;z-index:99}
+.skip:focus{left:12px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
+h1,h2,h3{margin:0;font-weight:500}
+h2{font-size:clamp(32px,3.8vw,54px);line-height:1.03;letter-spacing:-.045em}
+h3{font-size:20px;line-height:1.18;letter-spacing:-.025em}
+p{margin:0}
+.ic{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.tag{display:inline-flex;align-items:center;gap:10px;font:500 11.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink2)}
+.tag::before{content:"";width:18px;height:1px;background:currentColor;opacity:.6}
+.dark .tag{color:var(--steel)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:14px;height:56px;padding:0 6px 0 24px;border-radius:99px;font-weight:500;font-size:15.5px;letter-spacing:-.012em;transition:transform .35s var(--ease),background .3s,box-shadow .3s;white-space:nowrap}
+.btn .ar{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;transition:transform .4s var(--ease)}
+.btn:hover .ar{transform:rotate(45deg)}
+.btn:active{transform:scale(.98)}
+.btn-b{background:var(--blue);color:#fff;box-shadow:0 14px 30px -14px rgba(31,85,230,.9)}
+.btn-b .ar{background:#fff;color:var(--blue)}
+.btn-b:hover{background:#1747CB}
+.btn-g{border:1px solid rgba(255,255,255,.22);color:#fff;padding:0 22px;gap:10px}
+.btn-g:hover{background:rgba(255,255,255,.07)}
+.btn-w{background:#fff;color:var(--navy)}
+.btn-w .ar{background:var(--blue);color:#fff}
+
+/* blueprint marks */
+.cota{position:absolute;display:flex;align-items:center;gap:8px;font:500 10.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.72);pointer-events:none}
+.cota.h{left:0;right:0;justify-content:center}
+.cota.h::before,.cota.h::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(255,255,255,.45),rgba(255,255,255,.45)) center/100% 1px no-repeat;border-left:1px solid rgba(255,255,255,.5);height:9px}
+.cota.h::after{border-left:0;border-right:1px solid rgba(255,255,255,.5)}
+
+/* HERO */
+.hero{margin:12px;border-radius:var(--r);background:var(--navy);color:#fff;position:relative;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:radial-gradient(120% 90% at 75% 40%,#000 30%,transparent 80%);mask-image:radial-gradient(120% 90% at 75% 40%,#000 30%,transparent 80%)}
+.hero::after{content:"";position:absolute;width:820px;height:820px;right:-240px;top:-260px;z-index:-1;background:radial-gradient(closest-side,rgba(31,85,230,.38),transparent 72%)}
+.top{display:flex;align-items:center;gap:14px;padding:18px 22px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .lg{background:#fff;border-radius:14px;padding:5px 9px;display:grid;place-items:center}
+.brand .lg img{height:34px;width:auto}
+.brand b{font-weight:500;font-size:15px;letter-spacing:-.02em;line-height:1.15}
+.brand b small{display:block;font-weight:400;font-size:12px;color:var(--steel);letter-spacing:0}
+.top .side{margin-left:auto;display:flex;align-items:center;gap:8px}
+.lang{display:flex;border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:3px}
+.lang button{font:500 12px/1 var(--sans);padding:8px 10px;border-radius:99px;color:rgba(255,255,255,.72);transition:.25s}
+.lang button[aria-pressed=true]{background:#fff;color:var(--navy)}
+.tel{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border-radius:99px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);font-size:14px;font-weight:500;font-variant-numeric:tabular-nums;transition:background .25s}
+.tel:hover{background:rgba(255,255,255,.16)}
+.h-grid{display:grid;grid-template-columns:1.02fr 1fr;gap:48px;align-items:center;padding:56px 56px 64px}
+.h-copy .tag{color:var(--steel)}
+.h-copy h1{margin-top:24px;font-size:clamp(42px,5vw,78px);line-height:.98;letter-spacing:-.055em}
+.h-copy h1 em{font-style:normal;color:#8FB0FF}
+.h-copy p.sub{margin-top:24px;font-size:18px;line-height:1.55;color:#C5CDDD;max-width:520px}
+.h-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.vals{display:flex;flex-wrap:wrap;gap:8px;margin-top:36px}
+.vals>span{display:inline-flex;align-items:center;gap:8px;height:36px;padding:0 14px;border-radius:99px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-size:13.5px;color:#DCE3F2}
+.vals .ic{width:16px;height:16px;color:#8FB0FF}
+.h-vis{position:relative;height:600px}
+.ph{position:absolute;border-radius:22px;overflow:hidden;background:var(--navy3);box-shadow:0 40px 80px -30px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.06)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph .lab{position:absolute;left:12px;bottom:12px;display:inline-flex;align-items:center;gap:8px;background:rgba(10,23,51,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff;border-radius:99px;padding:8px 13px;font-size:12.5px;font-weight:500}
+.ph .lab i{width:7px;height:7px;border-radius:50%;background:#8FB0FF}
+.v1{left:0;top:30px;width:58%;height:470px}
+.v2{right:0;top:0;width:38%;height:270px}
+.v3{right:0;bottom:30px;width:38%;height:280px}
+.h-vis .cota.h{top:auto;bottom:0;left:0;width:58%;right:auto}
+.h-vis .cota.v{position:absolute;right:calc(38% + 14px);top:0;height:270px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font:500 10.5px/1 var(--mono);letter-spacing:.08em;color:rgba(255,255,255,.6);writing-mode:vertical-rl;transform:rotate(180deg)}
+.h-vis .cota.v::before,.h-vis .cota.v::after{content:"";width:1px;flex:1;background:rgba(255,255,255,.4)}
+.h-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.1)}
+.h-strip div{padding:22px 28px;border-right:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:12px;font-size:14px;color:#C5CDDD}
+.h-strip div:last-child{border-right:0}
+.h-strip b{color:#fff;font-weight:500}
+.h-strip .ic{color:#8FB0FF;width:20px;height:20px}
+
+/* sections */
+.sec{padding:130px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:48px}
+.head .l{max-width:700px}
+.head h2{margin-top:20px}
+.head p{max-width:380px;color:var(--ink2)}
+
+/* services bento */
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;grid-auto-flow:dense}
+.s{border-radius:24px;background:var(--white);padding:26px;position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:240px;transition:transform .45s var(--ease),box-shadow .45s}
+.s:hover{transform:translateY(-4px);box-shadow:0 24px 50px -30px rgba(10,23,51,.35)}
+.s .ico{width:48px;height:48px;border-radius:14px;background:var(--sky);color:var(--blue);display:grid;place-items:center;margin-bottom:auto}
+.s .ico .ic{width:22px;height:22px}
+.s h3{margin-top:28px}
+.s p{margin-top:8px;font-size:14.5px;line-height:1.5;color:var(--ink2);max-width:330px}
+.s ul{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.s li{font-size:12.5px;padding:6px 11px;border-radius:99px;background:var(--paper);color:var(--ink2)}
+.s.ph2{padding:0;color:#fff;min-height:520px}
+.s.ph2 img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.s.ph2:hover img{transform:scale(1.04)}
+.s.ph2::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,23,51,0) 35%,rgba(10,23,51,.9))}
+.s.ph2 .cap{position:relative;z-index:1;margin-top:auto;padding:28px}
+.s.ph2 .cap h3{font-size:26px;margin:0}
+.s.ph2 .cap p{color:#D6DDEB;max-width:420px}
+.s.ph2 .cap li{background:rgba(255,255,255,.14);color:#fff}
+.s.ph2 .chip{position:absolute;z-index:1;top:18px;left:18px;font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;background:#fff;color:var(--navy);border-radius:99px;padding:8px 11px}
+.s.nv{background:var(--navy);color:#fff}
+.s.nv .ico{background:rgba(255,255,255,.08);color:#8FB0FF}
+.s.nv p{color:#C5CDDD}
+.s.nv li{background:rgba(255,255,255,.08);color:#DCE3F2}
+.s.bl{background:var(--blue);color:#fff}
+.s.bl .ico{background:rgba(255,255,255,.16);color:#fff}
+.s.bl p{color:rgba(255,255,255,.86)}
+.s.bl li{background:rgba(255,255,255,.16);color:#fff}
+.b-roof{grid-column:span 7;grid-row:span 2}
+.b-full{grid-column:span 5}
+.b-bath{grid-column:span 5}
+.b-kit{grid-column:span 4}
+.b-floor{grid-column:span 4}
+.b-fac{grid-column:span 4}
+
+/* roof story */
+.roof{margin:0 12px;border-radius:var(--r);background:var(--navy);color:#fff;padding:110px 0;position:relative;overflow:hidden}
+.roof::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:linear-gradient(180deg,#000,transparent 70%);mask-image:linear-gradient(180deg,#000,transparent 70%)}
+.roof .wrap{position:relative}
+.roof .head p{color:#C5CDDD}
+.phases{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;list-style:none;margin:0;padding:0;counter-reset:p}
+.phase{background:var(--navy2);border:1px solid rgba(255,255,255,.08);border-radius:24px;overflow:hidden;display:flex;flex-direction:column}
+.phase .im{aspect-ratio:1.05;position:relative;overflow:hidden}
+.phase .im img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.phase:hover .im img{transform:scale(1.04)}
+.phase .im .n{position:absolute;left:14px;top:14px;font:500 11px/1 var(--mono);letter-spacing:.08em;background:#fff;color:var(--navy);border-radius:99px;padding:8px 11px}
+.phase .tx{padding:24px 24px 28px}
+.phase .tx p{margin-top:8px;color:#C5CDDD;font-size:14.5px}
+.roof .note{margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding:24px 28px;border-radius:22px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1)}
+.roof .note p{font-size:17px;max-width:640px;color:#DCE3F2}
+
+/* works gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:260px;gap:12px;grid-auto-flow:dense}
+.g{border-radius:20px;overflow:hidden;position:relative;background:var(--line)}
+.g img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.g:hover img{transform:scale(1.05)}
+.g span{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.94);color:var(--navy);border-radius:99px;padding:7px 12px;font-size:12.5px;font-weight:500}
+.g.t{grid-row:span 2}
+.g.w{grid-column:span 2}
+
+/* audience */
+.aud{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.a{background:var(--white);border-radius:24px;padding:28px;display:flex;flex-direction:column;min-height:260px;border:1px solid transparent;transition:border-color .3s}
+.a:hover{border-color:var(--line)}
+.a .k{font:500 11.5px/1 var(--mono);letter-spacing:.08em;color:var(--blue);text-transform:uppercase}
+.a h3{margin-top:18px;font-size:24px}
+.a p{margin-top:10px;color:var(--ink2);font-size:15px}
+.a ul{margin:auto 0 0;padding:20px 0 0;list-style:none;display:grid;gap:8px;font-size:14px}
+.a li{display:flex;gap:10px;align-items:flex-start}
+.a li .ic{color:var(--blue);margin-top:3px;width:16px;height:16px}
+.a.hl{background:var(--sky)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.st{padding:28px 28px 0 0;position:relative}
+.st::before{content:"";position:absolute;top:-4px;left:0;width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px var(--paper)}
+.st .n{font:500 12px/1 var(--mono);letter-spacing:.08em;color:var(--ink3)}
+.st h3{margin-top:18px}
+.st p{margin-top:8px;color:var(--ink2);font-size:14.5px;max-width:250px}
+
+/* quote */
+.quote{margin:0 12px;border-radius:var(--r);background:var(--white)}
+.quote .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.q-copy{position:sticky;top:40px}
+.q-copy h2{margin-top:20px}
+.q-copy>p{margin-top:20px;color:var(--ink2);max-width:420px;font-size:17px}
+.q-call{margin-top:32px;padding:22px 24px;border-radius:20px;background:var(--paper);display:flex;align-items:center;gap:16px}
+.q-call .ico{width:48px;height:48px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;flex:none}
+.q-call small{display:block;color:var(--ink2);font-size:13px}
+.q-call a{font-size:24px;font-weight:500;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.q-call a:hover{color:var(--blue)}
+.form{background:var(--paper);border-radius:26px;padding:32px;display:grid;gap:22px}
+.f-lbl{display:block;font-weight:500;font-size:14px;margin-bottom:10px;letter-spacing:-.01em}
+.f-lbl small{font-weight:400;color:var(--ink3);margin-left:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{position:relative;cursor:pointer}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips span{display:inline-flex;align-items:center;height:42px;padding:0 15px;border-radius:99px;background:#fff;border:1px solid var(--line);font-size:14px;transition:background .2s,color .2s,border-color .2s}
+.chips label:hover span{border-color:var(--ink3)}
+.chips input:checked+span{background:var(--navy);border-color:var(--navy);color:#fff}
+.chips input:focus-visible+span{outline:2px solid var(--blue2);outline-offset:2px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fi{width:100%;height:52px;border-radius:14px;border:1px solid var(--line);background:#fff;padding:0 16px;font-size:15px;transition:border-color .2s,box-shadow .2s}
+textarea.fi{height:auto;min-height:100px;padding:14px 16px;resize:vertical;line-height:1.45}
+.fi:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(31,85,230,.12)}
+.form .btn{width:100%;justify-content:space-between}
+.f-note{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ink2)}
+.f-note .ic{color:var(--blue);margin-top:2px}
+.status{font-size:13.5px;min-height:20px;color:var(--ink2)}
+.status.err{color:#C2362B}
+
+/* faq */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font-size:18px;font-weight:500;letter-spacing:-.02em}
+summary::-webkit-details-marker{display:none}
+summary .pl{width:32px;height:32px;border-radius:50%;background:var(--white);display:grid;place-items:center;flex:none;transition:transform .35s var(--ease),background .3s}
+details[open] summary .pl{transform:rotate(45deg);background:var(--navy);color:#fff}
+details p{padding:0 48px 24px 0;color:var(--ink2)}
+
+/* footer */
+footer{margin:0 12px 12px;border-radius:var(--r);background:var(--navy);color:#fff;padding:72px 0 28px;overflow:hidden}
+.f-top{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}
+.f-top .lgw{background:#fff;border-radius:18px;padding:10px 16px;display:inline-block}
+.f-top .lgw img{height:70px;width:auto}
+.f-top p{margin-top:18px;color:#C5CDDD;font-size:14.5px;max-width:320px}
+.f-col small{display:block;font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--steel);margin-bottom:16px}
+.f-col a,.f-col span{display:block;font-size:15px;margin-bottom:10px;color:#E3E8F3}
+.f-col a:hover{color:#8FB0FF}
+.word{font-weight:600;font-size:min(9vw,136px);line-height:.8;letter-spacing:-.07em;margin:64px 0 0 -.04em;white-space:nowrap;color:#fff;user-select:none}
+.word span{color:var(--blue2)}
+.f-bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:12.5px;color:var(--steel)}
+
+.dock{display:none}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+@media (max-width:1180px){
+  .h-grid{padding:40px 36px 56px;gap:32px}
+  .h-vis{height:520px}
+  .v1{height:400px}.v2{height:230px}.v3{height:240px}
+  .h-vis .cota.v{height:230px}
+  .h-strip{grid-template-columns:1fr 1fr}
+  .h-strip div:nth-child(2){border-right:0}
+  .h-strip div:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.1)}
+  .bento{grid-template-columns:repeat(6,1fr)}
+  .b-roof{grid-column:span 6;grid-row:auto}
+  .b-full,.b-bath,.b-kit,.b-floor,.b-fac{grid-column:span 3}
+  .steps{grid-template-columns:1fr 1fr;row-gap:40px}
+}
+@media (max-width:920px){
+  .h-grid{grid-template-columns:1fr;padding:36px 28px 48px}
+  .h-vis{height:min(560px,96vw)}
+  .head{flex-direction:column;align-items:flex-start;gap:18px}
+  .phases,.aud{grid-template-columns:1fr}
+  .phase{display:grid;grid-template-columns:200px 1fr}
+  .phase .im{aspect-ratio:auto;min-height:180px}
+  .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:220px}
+  .quote .wrap,.faq{grid-template-columns:1fr;gap:40px}
+  .q-copy{position:static}
+  .f-top{grid-template-columns:1fr 1fr}
+  .f-top>div:first-child{grid-column:1/-1}
+  .sec{padding:96px 0}
+  .roof{padding:84px 0}
+}
+@media (max-width:640px){
+  .wrap{padding:0 20px}
+  .hero,.roof,.quote{margin:8px;border-radius:24px}
+  footer{margin:0 8px 8px;border-radius:24px;padding-bottom:110px}
+  .top{padding:14px 14px}
+  .brand b{display:none}
+  .brand .lg img{height:30px}
+  .tel span{display:none}
+  .tel{width:40px;padding:0;justify-content:center}
+  .h-grid{padding:28px 18px 36px;gap:36px}
+  .h-copy h1{font-size:clamp(28px,8.6vw,50px)}
+  .h-copy p.sub{font-size:16.5px}
+  .h-cta .btn{width:100%;justify-content:space-between}
+  .h-cta .btn-g{justify-content:center}
+  .h-vis{height:430px}
+  .v1{width:62%;height:330px;top:20px}
+  .v2{width:35%;height:190px}
+  .v3{width:35%;height:200px;bottom:24px}
+  .h-vis .cota.h{width:62%}
+  .h-vis .cota.v{display:none}
+  .h-strip{grid-template-columns:1fr}
+  .h-strip div{border-right:0;border-bottom:1px solid rgba(255,255,255,.1);padding:16px 22px}
+  .h-strip div:last-child{border-bottom:0}
+  .sec{padding:80px 0}
+  .bento{grid-template-columns:1fr;gap:8px}
+  .b-roof,.b-full,.b-bath,.b-kit,.b-floor,.b-fac{grid-column:auto}
+  .s{min-height:0;padding:22px}
+  .s .ico{margin-bottom:0}
+  .s h3{margin-top:20px}
+  .s.ph2{min-height:440px}
+  .phase{grid-template-columns:1fr}
+  .phase .im{aspect-ratio:1.3}
+  .roof .note{flex-direction:column;align-items:flex-start}
+  .roof .note .btn{width:100%;justify-content:space-between}
+  .gal{grid-auto-rows:170px;gap:8px}
+  .g.w{grid-column:span 2}
+  .steps{grid-template-columns:1fr;row-gap:0;border-top:0;border-left:1px solid var(--line);margin-left:4px}
+  .st{padding:0 0 32px 26px}
+  .st::before{top:2px;left:-4px}
+  .st h3{margin-top:10px}
+  .form{padding:20px;border-radius:22px}
+  .f2{grid-template-columns:1fr}
+  .q-call a{font-size:21px}
+  summary{font-size:16.5px}
+  details p{padding-right:0}
+  .f-top{grid-template-columns:1fr}
+  .dock{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:50;gap:8px;transform:translateY(140%);transition:transform .5s var(--ease)}
+  .dock.on{transform:none}
+  .dock .btn{flex:1;justify-content:space-between;box-shadow:0 18px 40px -14px rgba(10,23,51,.6)}
+  .dock .tel2{width:56px;height:56px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;flex:none;box-shadow:0 18px 40px -14px rgba(10,23,51,.6)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation:none!important}
+  .rv{opacity:1;transform:none}
+}
+
+/* ===== v3 SKY HERO (Aeline) ===== */
+.sky{margin:12px;border-radius:30px;position:relative;overflow:hidden;isolation:isolate;color:#fff;background:linear-gradient(180deg,#1A57E6 0%,#2C74EF 34%,#5FA2F5 64%,#A9D0FA 88%,#D7EAFD 100%);padding-bottom:40px}
+.clouds{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.clouds i{position:absolute;display:block;filter:blur(14px);opacity:.92;background:radial-gradient(38% 46% at 28% 62%,#fff 0 45%,rgba(255,255,255,0) 72%),radial-gradient(34% 50% at 52% 44%,#fff 0 42%,rgba(255,255,255,0) 72%),radial-gradient(38% 44% at 76% 64%,#fff 0 45%,rgba(255,255,255,0) 72%),radial-gradient(60% 30% at 50% 86%,#fff 0 50%,rgba(255,255,255,0) 75%)}
+.clouds .c1{width:640px;height:300px;left:-160px;top:300px;opacity:.85}
+.clouds .c2{width:720px;height:320px;right:-200px;top:260px;opacity:.8}
+.clouds .c3{width:900px;height:340px;left:8%;bottom:-120px}
+.clouds .c4{width:820px;height:320px;right:-6%;bottom:-140px}
+.clouds .c5{width:420px;height:200px;left:34%;top:420px;opacity:.55}
+.clouds .c6{width:380px;height:180px;right:24%;top:120px;opacity:.28}
+.sky .top{position:relative;z-index:3;display:flex;align-items:center;gap:20px;padding:18px 24px}
+.sky .brand b small{color:rgba(255,255,255,.75)}
+.nav{display:flex;gap:30px;margin:0 auto;font-size:13.5px;letter-spacing:.06em;text-transform:uppercase}
+.nav a{opacity:.92;transition:opacity .2s}
+.nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
+.sky .side{margin-left:0}
+.sky .lang{border-color:rgba(255,255,255,.35)}
+.sky .lang button{color:rgba(255,255,255,.85)}
+.sky .lang button[aria-pressed=true]{background:#fff;color:var(--blue)}
+.tel-p{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border-radius:99px;background:#fff;color:var(--navy);font-weight:600;font-size:14px;font-variant-numeric:tabular-nums;transition:transform .25s}
+.tel-p:hover{transform:translateY(-1px)}
+.s-copy{position:relative;z-index:3;text-align:center;max-width:1100px;margin:0 auto;padding:44px 24px 0}
+.s-copy h1{font-size:clamp(38px,4.7vw,70px);line-height:1.02;letter-spacing:-.05em;font-weight:500}
+.s-copy h1 span{display:block}
+.s-copy h1 .l2{color:rgba(255,255,255,.72)}
+.s-copy .sub{margin:22px auto 0;max-width:560px;font-size:17.5px;line-height:1.5;color:rgba(255,255,255,.9)}
+.s-cta{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:30px}
+.pill-g{display:inline-flex;align-items:center;height:52px;padding:0 24px;border-radius:99px;background:rgba(11,30,80,.5);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:background .25s}
+.pill-g:hover{background:rgba(11,30,80,.55)}
+.pill-w{display:inline-flex;align-items:center;gap:14px;height:52px;padding:0 6px 0 24px;border-radius:99px;background:#fff;color:var(--navy);font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 14px 30px -16px rgba(10,23,51,.6)}
+.pill-w .ar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:#fff;transition:transform .4s var(--ease)}
+.pill-w:hover .ar{transform:rotate(45deg)}
+.arc{position:relative;z-index:2;height:290px;margin-top:26px;perspective:1300px;perspective-origin:50% 30%}
+.ac{position:absolute;left:50%;top:50%;width:172px;height:212px;margin:0;border-radius:18px;overflow:hidden;transform-style:preserve-3d;box-shadow:0 30px 60px -30px rgba(10,30,90,.55),0 0 0 1px rgba(255,255,255,.35);opacity:0;transition:transform 1.3s cubic-bezier(.2,.75,.15,1),opacity 1s ease;will-change:transform}
+.ac.ph img{width:100%;height:100%;object-fit:cover}
+.ac.ph figcaption{position:absolute;left:10px;bottom:10px;background:rgba(255,255,255,.94);color:var(--navy);font-size:12px;font-weight:600;border-radius:99px;padding:6px 11px}
+.ac.wh{background:#fff;color:var(--navy);padding:18px;display:flex;flex-direction:column}
+.ac.wh .ico{width:40px;height:40px;border-radius:12px;background:var(--sky);color:var(--blue);display:grid;place-items:center;margin-bottom:auto}
+.ac.wh b{font-weight:600;font-size:17px;letter-spacing:-.02em;line-height:1.15}
+.ac.wh small{margin-top:6px;font-size:12.5px;color:var(--ink2);line-height:1.35}
+.ac.dk{background:var(--navy);color:#fff;padding:20px;display:flex;flex-direction:column;justify-content:space-between}
+.ac.dk p{font-size:19px;line-height:1.2;letter-spacing:-.02em;font-weight:500}
+.ac.dk p i{display:inline-block;width:12px;height:12px;border-radius:50%;background:#8FB0FF;margin-right:6px;transform:translateY(1px)}
+.ac.dk p em{font-style:normal;color:#8FA3C9}
+.ac.dk .hn{font-weight:600;font-size:13px;letter-spacing:.12em;color:#8FB0FF}
+.ac.gl{background:rgba(31,85,230,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.45);color:#fff;padding:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px}
+.ac.gl .plus{width:46px;height:46px;border-radius:50%;background:#fff;color:var(--blue);display:grid;place-items:center;margin-bottom:8px}
+.ac.gl b{font-weight:600;font-size:16px;line-height:1.2}
+.ac.gl small{font-size:13px;opacity:.9;font-variant-numeric:tabular-nums}
+.s-foot{position:relative;z-index:3;display:flex;justify-content:center;align-items:center;gap:8px;margin-top:22px;font-size:14px;color:var(--navy);font-weight:500}
+.s-foot .ic{color:var(--blue)}
+/* marquee */
+.mq{overflow:hidden;padding:34px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.mq-t{display:flex;gap:56px;width:max-content;animation:mq 38s linear infinite}
+.mq-t>span{display:inline-flex;align-items:center;gap:10px;font-size:18px;font-weight:500;color:#9AA2B1;letter-spacing:-.02em;white-space:nowrap}
+.mq-t .ic{width:22px;height:22px;color:#9AA2B1}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* about */
+.about{padding:70px 0 120px;text-align:center}
+.kick{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2)}
+.kick i{width:5px;height:5px;border-radius:50%;background:var(--ink)}
+.stmt{margin:18px auto 0;max-width:900px;font-size:clamp(30px,3.6vw,50px);line-height:1.16;letter-spacing:-.045em;font-weight:500}
+.stmt .gr{color:#8A93A5}
+.stmt .chip{display:inline-block;width:1.5em;height:1em;border-radius:99px;object-fit:cover;vertical-align:-.12em;margin:0 .06em}
+.bento2{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:64px;text-align:left}
+.b2{border-radius:24px;overflow:hidden;position:relative;min-height:200px}
+.b2-a{background:var(--blue);min-height:430px}
+.b2-a img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.b2-a .card-in{position:absolute;left:14px;right:14px;bottom:14px;background:#fff;border-radius:18px;padding:22px}
+.b2-a .card-in b{display:block;font-size:30px;font-weight:500;letter-spacing:-.04em;line-height:1}
+.b2-a .card-in span{display:block;margin-top:10px;font-size:14px;color:var(--ink2);line-height:1.45}
+.b2-b{background:#E9EBEF;padding:24px;display:flex;flex-direction:column}
+.b2 small{font-size:13px;color:var(--ink2)}
+.b2-b .q{margin-top:auto;font-size:clamp(24px,2.3vw,32px);line-height:1.12;letter-spacing:-.04em;font-weight:500}
+.b2-b .sig{display:flex;align-items:center;gap:12px;margin-top:26px;font-size:13.5px;color:var(--ink2)}
+.b2-b .lgx{background:#fff;border-radius:10px;padding:4px 7px;line-height:0}
+.b2-b .lgx img{height:26px;width:auto}
+.b2-col{display:grid;grid-template-rows:1.25fr 1fr;gap:14px}
+.b2-c{background:#C9DAFF;padding:24px;display:flex;flex-direction:column}
+.b2-c b{margin-top:auto;font-size:clamp(22px,2vw,28px);line-height:1.1;letter-spacing:-.035em;font-weight:500;color:var(--navy)}
+.b2-c span{margin-top:10px;font-size:14px;color:#3A4A72}
+.b2-d{background:var(--navy);color:#fff;padding:22px 24px;display:flex;flex-direction:column;justify-content:space-between;gap:14px;min-height:0;transition:background .25s}
+.b2-d:hover{background:var(--navy3)}
+.b2-d small{color:#B9C4DE}
+.b2-d b{font-size:clamp(24px,2.3vw,32px);font-weight:500;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+@media (max-width:1100px){.nav{display:none}.sky .side{margin-left:auto}}
+@media (max-width:920px){.bento2{grid-template-columns:1fr 1fr}.b2-col{grid-column:1/-1;grid-template-columns:1fr 1fr;grid-template-rows:auto}.arc{height:290px}.ac{width:160px;height:200px}}
+@media (max-width:640px){
+  .sky{margin:8px;border-radius:24px}
+  .sky .top{padding:14px}
+  .sky .brand b{display:none}
+  .tel-p span{display:none}.tel-p{width:40px;padding:0;justify-content:center}
+  .s-copy{padding-top:40px}
+  .s-copy h1{font-size:clamp(25px,8.2vw,44px)}
+  .s-copy{padding-left:14px;padding-right:14px}
+  .s-copy .sub{font-size:16px}
+  .s-cta{flex-direction:column;align-items:stretch;padding:0 6px}
+  .pill-g{justify-content:center}.pill-w{justify-content:space-between}
+  .arc{height:240px;margin-top:30px}
+  .ac{width:128px;height:164px;border-radius:14px}
+  .ac.wh,.ac.dk,.ac.gl{padding:12px}
+  .ac.wh b,.ac.gl b{font-size:14px}.ac.dk p{font-size:14.5px}
+  .ac.wh .ico{width:32px;height:32px}.ac.gl .plus{width:36px;height:36px}
+  .ac.ph figcaption{font-size:10.5px;padding:5px 8px}
+  .mq{padding:24px 0}
+  .about{padding:50px 0 80px}
+  .stmt{font-size:clamp(26px,7.4vw,34px)}
+  .bento2{grid-template-columns:1fr;margin-top:40px}
+  .b2-col{grid-template-columns:1fr}
+  .b2-a{min-height:380px}
+}
+@media (prefers-reduced-motion:reduce){.mq-t{animation:none}.ac{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-ar" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3.5l1.6 4.2-2.2 1.4a11 11 0 0 0 6.5 6.5l1.4-2.2L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M3.5 20.5 5 16a8.5 8.5 0 1 1 3.2 3.1z"/><path d="M9 9.2c.2 2.6 3.2 5.6 5.8 5.8l1.2-1.4-2-1-1 .8a5 5 0 0 1-2.4-2.4l.8-1-1-2z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></symbol>
+  <symbol id="i-roof" viewBox="0 0 24 24"><path d="M2.5 12 12 4.5 21.5 12"/><path d="M5 10.5V19h14v-8.5"/><path d="M8.5 15.5c1.2-1 2.3-1 3.5 0s2.3 1 3.5 0"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20H4z"/><path d="M9.5 20v-5.5h5V20"/></symbol>
+  <symbol id="i-bath" viewBox="0 0 24 24"><path d="M3.5 12h17v2.5a5 5 0 0 1-5 5h-7a5 5 0 0 1-5-5z"/><path d="M6 12V6a2 2 0 0 1 3.6-1.2"/><path d="M7 19.5 6 21M17 19.5l1 1.5"/></symbol>
+  <symbol id="i-kit" viewBox="0 0 24 24"><rect x="4" y="3.5" width="16" height="17" rx="2"/><path d="M4 9.5h16M8 6.5h.01M11 6.5h.01M10 13v4"/></symbol>
+  <symbol id="i-floor" viewBox="0 0 24 24"><path d="M3 9.5 12 4l9 5.5-9 5.5z"/><path d="M3 14.5 12 20l9-5.5M7.5 6.8l9 5.5M16.5 6.8l-9 5.5"/></symbol>
+  <symbol id="i-fac" viewBox="0 0 24 24"><rect x="5" y="3.5" width="14" height="17" rx="1"/><path d="M9 7.5h2M13 7.5h2M9 11.5h2M13 11.5h2M10 20.5v-4h4v4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5 19.5 6v5.5c0 4.4-3.1 7.9-7.5 9-4.4-1.1-7.5-4.6-7.5-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><circle cx="12" cy="9.5" r="5.5"/><path d="m9 14.3-1.5 6.2L12 18l4.5 2.5-1.5-6.2"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M3 12.5 7.5 8l3 1.5 3-1.5 4.5 4.5"/><path d="m7 15.5 2.5 2.5a1.5 1.5 0 0 0 2.2 0l5.3-5.3M3 12.5l4 3M21 12.5 18 15"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2.5h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3.5h8.5L19 8v12.5H6z"/><path d="M14 3.5V8h5M9 12.5h6M9 16h6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+</svg>
+
+<header class="sky" id="top">
+  <div class="clouds" aria-hidden="true"><i class="c1"></i><i class="c2"></i><i class="c3"></i><i class="c4"></i><i class="c5"></i><i class="c6"></i></div>
+  <div class="top">
+    <a class="brand" href="#top" aria-label="HN Construcciones y Reformas"><span class="lg"><img src="img/logo-sm.webp" alt="" width="192" height="103"></span><b>HN Construcciones<small>y Reformas · Barcelona</small></b></a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#servicios" data-i18n="nServ">Servicios</a><a href="#obras" data-i18n="nObras">Obras</a><a href="#como" data-i18n="nHow">Cómo trabajamos</a><a href="#faq" data-i18n="nFaq">Preguntas</a>
+    </nav>
+    <div class="side">
+      <div class="lang" role="group" aria-label="Idioma">
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="ca" aria-pressed="false">CA</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="tel-p" href="tel:+34658911503" aria-label="Llamar al 658 911 503"><svg class="ic"><use href="#i-phone"/></svg><span>658 911 503</span></a>
+    </div>
+  </div>
+
+  <div class="s-copy">
+    <h1><span data-i18n="hT1">Reformas e impermeabilización</span><span class="l2" data-i18n="hT2">hechas para durar.</span></h1>
+    <p class="sub" data-i18n="hSub">Cubiertas, terrazas, baños, cocinas y reformas integrales en Barcelona. Cuéntanos tu obra y te preparamos el presupuesto.</p>
+    <div class="s-cta">
+      <a class="pill-g" href="#obras" data-i18n="ctaWorks">Ver obras</a>
+      <a class="pill-w" href="#presupuesto"><span data-i18n="cta">Pedir presupuesto</span><span class="ar"><svg class="ic"><use href="#i-ar"/></svg></span></a>
+    </div>
+  </div>
+
+  <div class="arc" id="arc" aria-label="Obras recientes">
+    <figure class="ac ph"><img src="img/terrazzo.webp" alt="" width="690" height="970"></figure>
+    <div class="ac wh"><span class="ico"><svg class="ic"><use href="#i-roof"/></svg></span><b data-i18n="acRoof">Impermeabilización</b><small data-i18n="acRoofT">Terrados, cubiertas y terrazas</small></div>
+    <figure class="ac ph"><img src="img/hall.webp" alt="Pasillo con suelo hidráulico" data-i18n-alt="altHall" width="1000" height="1134"><figcaption data-i18n="lHall">Suelo hidráulico</figcaption></figure>
+    <figure class="ac ph"><img src="img/membrane.webp" alt="Tela asfáltica en una cubierta" data-i18n-alt="altMem" width="1000" height="1131"><figcaption data-i18n="lMem">Tela asfáltica</figcaption></figure>
+    <div class="ac dk"><p data-i18n-html="acQuote"><i></i>Calidad que se ve, compromiso que se siente.</p><span class="hn">HN</span></div>
+    <figure class="ac ph"><img src="img/bath.webp" alt="Baño reformado con azulejo verde" data-i18n-alt="altBath" width="1000" height="1134" fetchpriority="high"><figcaption data-i18n="lBath">Reforma de baño</figcaption></figure>
+    <a class="ac gl" href="#presupuesto"><span class="plus"><svg class="ic"><use href="#i-wa"/></svg></span><b data-i18n="acWa">Presupuesto por WhatsApp</b><small>658 911 503</small></a>
+    <figure class="ac ph"><img src="img/sunset.webp" alt="Terraza terminada" data-i18n-alt="altSun" width="1000" height="1232"><figcaption data-i18n="lSun">Terraza</figcaption></figure>
+    <div class="ac wh"><span class="ico"><svg class="ic"><use href="#i-home"/></svg></span><b data-i18n="acFull">Reformas integrales</b><small data-i18n="acFullT">Pisos, baños y cocinas</small></div>
+    <figure class="ac ph"><img src="img/kitchen.webp" alt="" width="852" height="970"></figure>
+    <figure class="ac ph"><img src="img/worker.webp" alt="" width="1000" height="964"></figure>
+  </div>
+  <p class="s-foot"><svg class="ic"><use href="#i-pin"/></svg><span data-i18n="sFoot">Barcelona y alrededores</span></p>
+</header>
+
+<div class="mq" aria-hidden="true"><div class="mq-t">
+  <span><svg class="ic"><use href="#i-roof"/></svg><span data-i18n="mq1">Impermeabilización</span></span><span><svg class="ic"><use href="#i-home"/></svg><span data-i18n="mq2">Reformas integrales</span></span><span><svg class="ic"><use href="#i-bath"/></svg><span data-i18n="mq3">Baños</span></span><span><svg class="ic"><use href="#i-kit"/></svg><span data-i18n="mq4">Cocinas</span></span><span><svg class="ic"><use href="#i-floor"/></svg><span data-i18n="mq5">Suelos</span></span><span><svg class="ic"><use href="#i-fac"/></svg><span data-i18n="mq6">Fachadas</span></span><span><svg class="ic"><use href="#i-wa"/></svg><span data-i18n="mq7">Presupuesto por WhatsApp</span></span><span><svg class="ic"><use href="#i-roof"/></svg><span data-i18n="mq1">Impermeabilización</span></span><span><svg class="ic"><use href="#i-home"/></svg><span data-i18n="mq2">Reformas integrales</span></span><span><svg class="ic"><use href="#i-bath"/></svg><span data-i18n="mq3">Baños</span></span><span><svg class="ic"><use href="#i-kit"/></svg><span data-i18n="mq4">Cocinas</span></span><span><svg class="ic"><use href="#i-floor"/></svg><span data-i18n="mq5">Suelos</span></span><span><svg class="ic"><use href="#i-fac"/></svg><span data-i18n="mq6">Fachadas</span></span><span><svg class="ic"><use href="#i-wa"/></svg><span data-i18n="mq7">Presupuesto por WhatsApp</span></span>
+</div></div>
+
+<section class="about" aria-labelledby="abT">
+  <div class="wrap">
+    <p class="kick"><i></i><span data-i18n="abKick">Sobre nosotros</span></p>
+    <h2 class="stmt" id="abT"><span data-i18n="ab1">Una constructora de Barcelona dedicada a</span> <img class="chip" src="img/bath.webp" alt="" width="1000" height="1134"> <span data-i18n="ab2">reformas bien hechas</span> <span class="gr"><span data-i18n="ab3">y</span> <img class="chip" src="img/membrane.webp" alt="" width="1000" height="1131"> <span data-i18n="ab4">terrados sin goteras.</span></span></h2>
+    <div class="bento2">
+      <article class="b2 b2-a"><img src="img/sign.webp" alt="Rótulo de HN Construcciones en una fachada" data-i18n-alt="altSign" loading="lazy" width="1000" height="1136"><div class="card-in"><b>Grupo Hélio Nil</b><span data-i18n="b2a">Construcciones y Reformas, S.L. Un equipo propio para la obra entera.</span></div></article>
+      <article class="b2 b2-b"><small data-i18n="b2bK">Nuestra forma de trabajar</small><p class="q" data-i18n="b2bQ">“Calidad que se ve, compromiso que se siente.”</p><div class="sig"><span class="lgx"><img src="img/logo-sm.webp" alt="" width="192" height="103"></span><span data-i18n="b2bS">El lema de HN en cada obra</span></div></article>
+      <div class="b2-col">
+        <article class="b2 b2-c"><small data-i18n="b2cK">Especialidad</small><b data-i18n="b2cT">Impermeabilización de terrados y cubiertas</b><span data-i18n="b2cD">Tela asfáltica, remates en petos y pavimento nuevo.</span></article>
+        <a class="b2 b2-d" href="#presupuesto"><small data-i18n="b2dK">Atención por WhatsApp</small><b>658 911 503</b></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<main id="main">
+  <section class="sec" id="servicios" aria-labelledby="svT">
+    <div class="wrap">
+      <div class="head">
+        <div class="l"><span class="tag rv" data-i18n="svTag">Qué hacemos</span><h2 class="rv d1" id="svT" data-i18n="svTitle">De la cubierta al último azulejo.</h2></div>
+        <p class="rv d2" data-i18n="svText">Un solo equipo para la obra entera: impermeabilización, albañilería, acabados y reformas completas.</p>
+      </div>
+      <div class="bento">
+        <article class="s ph2 b-roof rv"><img src="img/membrane.webp" alt="" loading="lazy" width="1000" height="1131"><span class="chip" data-i18n="chipMain">Especialidad</span>
+          <div class="cap"><h3 data-i18n="sRoof">Impermeabilización de cubiertas y terrazas</h3><p data-i18n="sRoofT">Retiramos el pavimento antiguo, colocamos tela asfáltica y dejamos la cubierta lista para años sin filtraciones.</p>
+          <ul><li data-i18n="sRoof1">Cubiertas planas</li><li data-i18n="sRoof2">Terrazas</li><li data-i18n="sRoof3">Tela asfáltica</li><li data-i18n="sRoof4">Pavimento nuevo</li></ul></div></article>
+        <article class="s nv b-full rv d1"><span class="ico"><svg class="ic"><use href="#i-home"/></svg></span><h3 data-i18n="sFull">Reformas integrales</h3><p data-i18n="sFullT">El piso completo, de la demolición a la entrega, con un único responsable.</p><ul><li data-i18n="sFull1">Distribución</li><li data-i18n="sFull2">Albañilería</li><li data-i18n="sFull3">Acabados</li></ul></article>
+        <article class="s b-bath rv d2"><span class="ico"><svg class="ic"><use href="#i-bath"/></svg></span><h3 data-i18n="sBath">Baños</h3><p data-i18n="sBathT">Alicatado, suelo, sanitarios y mueble. Baños actuales y fáciles de limpiar.</p></article>
+        <article class="s b-kit rv"><span class="ico"><svg class="ic"><use href="#i-kit"/></svg></span><h3 data-i18n="sKit">Cocinas</h3><p data-i18n="sKitT">Revestimientos, instalación y montaje para una cocina lista para usar.</p></article>
+        <article class="s bl b-floor rv d1"><span class="ico"><svg class="ic"><use href="#i-floor"/></svg></span><h3 data-i18n="sFloor">Suelos</h3><p data-i18n="sFloorT">Parquet, laminado, cerámica y terrazo, colocados y nivelados.</p><ul><li>Parquet</li><li data-i18n="sFloor2">Laminado</li><li data-i18n="sFloor3">Cerámica</li><li data-i18n="sFloor4">Terrazo</li></ul></article>
+        <article class="s b-fac rv d2"><span class="ico"><svg class="ic"><use href="#i-fac"/></svg></span><h3 data-i18n="sFac">Fachadas y trabajos en altura</h3><p data-i18n="sFacT">Reparación y mantenimiento de fachadas, chimeneas y elementos exteriores.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="roof dark" aria-labelledby="rfT">
+    <div class="wrap">
+      <div class="head">
+        <div class="l"><span class="tag rv" data-i18n="rfTag">Impermeabilización paso a paso</span><h2 class="rv d1" id="rfT" data-i18n="rfTitle">Antes de que la gotera llegue al techo de abajo.</h2></div>
+        <p class="rv d2" data-i18n="rfText">Así trabajamos una cubierta, como lo mostramos en nuestras obras reales.</p>
+      </div>
+      <ol class="phases">
+        <li class="phase rv"><div class="im"><img src="img/worker.webp" alt="Operario trabajando en una cubierta junto a una chimenea" data-i18n-alt="altWorker" width="1000" height="965" loading="lazy"><span class="n" data-i18n="p1n">Parte 1</span></div><div class="tx"><h3 data-i18n="p1">Retirada y preparación</h3><p data-i18n="p1t">Levantamos el pavimento dañado, revisamos el soporte y dejamos la base limpia.</p></div></li>
+        <li class="phase rv d1"><div class="im"><img src="img/membrane.webp" alt="Tela asfáltica instalada en la cubierta" data-i18n-alt="altMem" width="1000" height="1131" loading="lazy"><span class="n" data-i18n="p2n">Parte 2</span></div><div class="tx"><h3 data-i18n="p2">Tela asfáltica</h3><p data-i18n="p2t">Colocamos la membrana impermeable con solapes y remates en petos y chimeneas.</p></div></li>
+        <li class="phase rv d2"><div class="im"><img src="img/sunset.webp" alt="Terraza terminada con baldosa cerámica" data-i18n-alt="altSun" width="1000" height="1232" loading="lazy"><span class="n" data-i18n="p3n">Parte 3 · final</span></div><div class="tx"><h3 data-i18n="p3">Acabado</h3><p data-i18n="p3t">Pavimento nuevo y cubierta lista para usar y para aguantar la lluvia.</p></div></li>
+      </ol>
+      <div class="note rv"><p data-i18n="rfNote">¿Manchas de humedad en el techo o filtraciones desde la terraza? Envíanos fotos por WhatsApp y te decimos qué necesita.</p><a class="btn btn-w" href="#presupuesto"><span data-i18n="cta">Pedir presupuesto</span><span class="ar"><svg class="ic"><use href="#i-ar"/></svg></span></a></div>
+    </div>
+  </section>
+
+  <section class="sec" id="obras" aria-labelledby="obT">
+    <div class="wrap">
+      <div class="head">
+        <div class="l"><span class="tag rv" data-i18n="obTag">Obras recientes</span><h2 class="rv d1" id="obT" data-i18n="obTitle">Calidad que se ve.</h2></div>
+        <p class="rv d2" data-i18n="obText">Trabajos reales de nuestro equipo en Barcelona. Más en nuestro Instagram.</p>
+      </div>
+      <div class="gal">
+        <figure class="g t rv" style="margin:0"><img src="img/hall.webp" alt="Pasillo con suelo hidráulico blanco y negro" data-i18n-alt="altHall" loading="lazy" width="1000" height="1134"><span data-i18n="gHall">Pasillo · suelo hidráulico</span></figure>
+        <figure class="g w rv d1" style="margin:0"><img src="img/sign.webp" alt="Rótulo de HN Construcciones en una fachada" data-i18n-alt="altSign" loading="lazy" width="1000" height="1136"><span data-i18n="gSign">Nuestra firma en obra</span></figure>
+        <figure class="g t rv d2" style="margin:0"><img src="img/kitchen.webp" alt="Cocina blanca reformada" data-i18n-alt="altKit" loading="lazy" width="852" height="970"><span data-i18n="gKit">Cocina</span></figure>
+        <figure class="g rv" style="margin:0"><img src="img/wood.webp" alt="Suelo laminado de madera recién colocado" data-i18n-alt="altWood" loading="lazy" width="852" height="964"><span data-i18n="gWood">Suelo de madera</span></figure>
+        <figure class="g rv d1" style="margin:0"><img src="img/room.webp" alt="Habitación con parquet en espiga" data-i18n-alt="altRoom" loading="lazy" width="630" height="964"><span data-i18n="gRoom">Parquet en espiga</span></figure>
+        <figure class="g rv" style="margin:0"><img src="img/terrazzo.webp" alt="Pasillo con suelo de terrazo pulido" data-i18n-alt="altTerr" loading="lazy" width="690" height="970"><span data-i18n="gTerr">Terrazo pulido</span></figure>
+        <figure class="g w rv d1" style="margin:0"><img src="img/terrace.webp" alt="Terraza con baldosa cerámica y plantas" data-i18n-alt="altTerrace" loading="lazy" width="850" height="970"><span data-i18n="gTerrace">Terraza</span></figure>
+        <figure class="g rv d2" style="margin:0"><img src="img/facade.webp" alt="Fachada con rótulos de HN Construcciones" data-i18n-alt="altFac" loading="lazy" width="850" height="968"><span data-i18n="gFac">HN en la calle</span></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0" aria-labelledby="auT">
+    <div class="wrap">
+      <div class="head">
+        <div class="l"><span class="tag rv" data-i18n="auTag">Para quién trabajamos</span><h2 class="rv d1" id="auT" data-i18n="auTitle">Una obra bien hecha, sea cual sea su tamaño.</h2></div>
+      </div>
+      <div class="aud">
+        <article class="a rv"><span class="k">01</span><h3 data-i18n="a1">Particulares</h3><p data-i18n="a1t">Tu piso, tu baño o tu terraza, con un presupuesto claro antes de empezar.</p><ul><li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="a1a">Reformas de baño y cocina</span></li><li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="a1b">Suelos y pintura</span></li><li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="a1c">Terrazas privadas</span></li></ul></article>
+        <article class="a hl rv d1"><span class="k">02</span><h3 data-i18n="a2">Comunidades y administradores de fincas</h3><p data-i18n="a2t">Cubiertas, fachadas y zonas comunes del edificio, con un solo interlocutor.</p><ul><li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="a2a">Impermeabilización de cubiertas</span></li><li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="a2b">Fachadas y chimeneas</span></li><li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="a2c">Escaleras y portales</span></li></ul></article>
+        <article class="a rv d2"><span class="k">03</span><h3 data-i18n="a3">Locales y negocios</h3><p data-i18n="a3t">Adecuación de locales y oficinas para abrir o renovar tu espacio.</p><ul><li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="a3a">Reforma de locales</span></li><li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="a3b">Suelos y revestimientos</span></li><li><svg class="ic"><use href="#i-check"/></svg><span data-i18n="a3c">Baños y office</span></li></ul></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="como" style="padding-top:0" aria-labelledby="hwT">
+    <div class="wrap">
+      <div class="head">
+        <div class="l"><span class="tag rv" data-i18n="hwTag">Cómo trabajamos</span><h2 class="rv d1" id="hwT" data-i18n="hwTitle">Sin sorpresas, de la primera foto a la entrega.</h2></div>
+      </div>
+      <ol class="steps">
+        <li class="st rv"><span class="n">01</span><h3 data-i18n="w1">Nos escribes</h3><p data-i18n="w1t">Por WhatsApp o teléfono. Si puedes, envía fotos de la zona.</p></li>
+        <li class="st rv d1"><span class="n">02</span><h3 data-i18n="w2">Visita y medición</h3><p data-i18n="w2t">Vemos la obra, medimos y te explicamos qué hace falta.</p></li>
+        <li class="st rv d2"><span class="n">03</span><h3 data-i18n="w3">Presupuesto claro</h3><p data-i18n="w3t">Partidas, materiales y plazos, para que decidas con calma.</p></li>
+        <li class="st rv d3"><span class="n">04</span><h3 data-i18n="w4">Obra y entrega</h3><p data-i18n="w4t">Ejecutamos y te entregamos la obra limpia y terminada.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec quote" id="presupuesto" aria-labelledby="qT">
+    <div class="wrap">
+      <div class="q-copy">
+        <span class="tag rv" data-i18n="qTag">Presupuesto</span>
+        <h2 class="rv d1" id="qT" data-i18n="qTitle">Cuéntanos tu obra.</h2>
+        <p class="rv d2" data-i18n="qText">Rellena cuatro datos y se abrirá WhatsApp con tu mensaje listo. Allí puedes adjuntar fotos.</p>
+        <div class="q-call rv d3"><span class="ico"><svg class="ic"><use href="#i-phone"/></svg></span><div><small data-i18n="qCall">¿Prefieres llamar?</small><a href="tel:+34658911503">658 911 503</a></div></div>
+      </div>
+      <form class="form rv d1" id="qform" novalidate>
+        <fieldset style="border:0;margin:0;padding:0">
+          <legend class="f-lbl" data-i18n="fType">¿Qué necesitas?</legend>
+          <div class="chips" id="chips"></div>
+        </fieldset>
+        <div class="f2">
+          <label><span class="f-lbl" data-i18n="fName">Nombre</span><input class="fi" id="name" autocomplete="name" maxlength="60"></label>
+          <label><span class="f-lbl" data-i18n="fZone">Zona o barrio</span><input class="fi" id="zone" maxlength="60" data-i18n-ph="fZonePh" placeholder="Ej.: Gràcia, Badalona..."></label>
+        </div>
+        <label><span class="f-lbl"><span data-i18n="fDet">Describe la obra</span><small data-i18n="fOpt">opcional</small></span><textarea class="fi" id="det" maxlength="600" data-i18n-ph="fDetPh" placeholder="Metros aproximados, estado actual, cuándo te gustaría empezar..."></textarea></label>
+        <button type="submit" class="btn btn-b"><span data-i18n="fSend">Enviar por WhatsApp</span><span class="ar"><svg class="ic"><use href="#i-wa"/></svg></span></button>
+        <p class="f-note"><svg class="ic"><use href="#i-cam"/></svg><span data-i18n="fNote">Consejo: después de enviar, adjunta 2 o 3 fotos de la zona. Así el presupuesto es más preciso.</span></p>
+        <p class="status" id="status" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="sec" id="faq" aria-labelledby="fqT">
+    <div class="wrap faq">
+      <div><span class="tag rv" data-i18n="fqTag">Preguntas frecuentes</span><h2 class="rv d1" id="fqT" style="margin-top:20px" data-i18n="fqTitle">Lo que suelen preguntarnos.</h2></div>
+      <div class="rv d1">
+        <details><summary><span data-i18n="q1">¿Cómo pido un presupuesto?</span><span class="pl"><svg class="ic"><use href="#i-plus"/></svg></span></summary><p data-i18n="a1q">Escríbenos por WhatsApp o llama al 658 911 503. Cuéntanos qué necesitas y, si puedes, envía fotos. Después concretamos una visita.</p></details>
+        <details><summary><span data-i18n="q2">¿En qué zonas trabajáis?</span><span class="pl"><svg class="ic"><use href="#i-plus"/></svg></span></summary><p data-i18n="a2q">Trabajamos en Barcelona y alrededores. Si tu obra está más lejos, pregúntanos.</p></details>
+        <details><summary><span data-i18n="q3">¿Cuánto tarda una impermeabilización?</span><span class="pl"><svg class="ic"><use href="#i-plus"/></svg></span></summary><p data-i18n="a3q">Depende de los metros y del estado de la cubierta. Te indicamos el plazo en el presupuesto, antes de empezar.</p></details>
+        <details><summary><span data-i18n="q4">¿Hacéis reformas completas o solo partes?</span><span class="pl"><svg class="ic"><use href="#i-plus"/></svg></span></summary><p data-i18n="a4q">Las dos cosas: desde un baño o un suelo hasta la reforma integral del piso, y obras en edificios para comunidades.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="dark">
+  <div class="wrap">
+    <div class="f-top">
+      <div><span class="lgw"><img src="img/logo-sm.webp" alt="Grupo Hélio Nil Construcciones y Reformas" width="192" height="103"></span><p data-i18n="fAbout">Grupo Hélio Nil Construcciones y Reformas, S.L. Calidad que se ve, compromiso que se siente.</p></div>
+      <div class="f-col"><small data-i18n="fContact">Contacto</small><a href="tel:+34658911503">658 911 503</a><a href="https://wa.me/34658911503" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.instagram.com/hnconstrucciones.bcn/" target="_blank" rel="noopener">@hnconstrucciones.bcn</a></div>
+      <div class="f-col"><small data-i18n="fServ">Servicios</small><span data-i18n="sRoofS">Impermeabilización</span><span data-i18n="sFull">Reformas integrales</span><span data-i18n="fServ3">Baños y cocinas</span><span data-i18n="sFloor">Suelos</span></div>
+    </div>
+    <div class="word" aria-hidden="true">HN <span>Construcciones</span></div>
+    <div class="f-bot"><span>© 2026 Grupo Hélio Nil Construcciones y Reformas, S.L.</span><span>Barcelona</span></div>
+  </div>
+</footer>
+
+<div class="dock" id="dock"><a class="btn btn-b" href="#presupuesto"><span data-i18n="cta">Pedir presupuesto</span><span class="ar"><svg class="ic"><use href="#i-wa"/></svg></span></a><a class="tel2" href="tel:+34658911503" aria-label="Llamar"><svg class="ic"><use href="#i-phone"/></svg></a></div>
+
+<script>
+const WA="34658911503";
+const TYPES=["tRoof","tTerrace","tFull","tBath","tKit","tFloor","tFac","tOther"];
+const T={
+es:{nServ:"Servicios",nObras:"Obras",nHow:"Cómo trabajamos",nFaq:"Preguntas",ctaWorks:"Ver obras",acRoof:"Impermeabilización",acRoofT:"Terrados, cubiertas y terrazas",lHall:"Suelo hidráulico",acQuote:"<i></i>Calidad que se ve, <em>compromiso que se siente.</em>",acWa:"Presupuesto por WhatsApp",acFull:"Reformas integrales",acFullT:"Pisos, baños y cocinas",sFoot:"Barcelona y alrededores",mq1:"Impermeabilización",mq2:"Reformas integrales",mq3:"Baños",mq4:"Cocinas",mq5:"Suelos",mq6:"Fachadas",mq7:"Presupuesto por WhatsApp",abKick:"Sobre nosotros",ab1:"Una constructora de Barcelona dedicada a",ab2:"reformas bien hechas",ab3:"y",ab4:"terrados sin goteras.",b2a:"Construcciones y Reformas, S.L. Un equipo propio para la obra entera.",b2bK:"Nuestra forma de trabajar",b2bQ:"“Calidad que se ve, compromiso que se siente.”",b2bS:"El lema de HN en cada obra",b2cK:"Especialidad",b2cT:"Impermeabilización de terrados y cubiertas",b2cD:"Tela asfáltica, remates en petos y pavimento nuevo.",b2dK:"Atención por WhatsApp",skip:"Saltar al contenido",hTag:"Construcciones y reformas · Barcelona",hT1:"Reformas e impermeabilización",hT2:"hechas para durar.",hSub:"Cubiertas, terrazas, baños, cocinas, suelos y reformas integrales en Barcelona. Cuéntanos tu obra y te preparamos el presupuesto.",
+cta:"Pedir presupuesto",ctaCall:"Llamar ahora",v1:"Calidad que se ve",v2:"Compromiso que se siente",v3:"Confianza",lBath:"Reforma de baño",lMem:"Impermeabilización",lSun:"Terraza",cotaH:"Obra real · HN",
+st1:"<b>Cubiertas y terrazas</b> impermeabilizadas",st2:"<b>Reformas integrales</b> de pisos",st3:"<b>Presupuesto</b> por WhatsApp",st4:"<b>Barcelona</b> y alrededores",
+svTag:"Qué hacemos",svTitle:"De la cubierta al último azulejo.",svText:"Un solo equipo para la obra entera: impermeabilización, albañilería, acabados y reformas completas.",chipMain:"Especialidad",
+sRoof:"Impermeabilización de cubiertas y terrazas",sRoofS:"Impermeabilización",sRoofT:"Retiramos el pavimento antiguo, colocamos tela asfáltica y dejamos la cubierta lista para años sin filtraciones.",sRoof1:"Cubiertas planas",sRoof2:"Terrazas",sRoof3:"Tela asfáltica",sRoof4:"Pavimento nuevo",
+sFull:"Reformas integrales",sFullT:"El piso completo, de la demolición a la entrega, con un único responsable.",sFull1:"Distribución",sFull2:"Albañilería",sFull3:"Acabados",
+sBath:"Baños",sBathT:"Alicatado, suelo, sanitarios y mueble. Baños actuales y fáciles de limpiar.",sKit:"Cocinas",sKitT:"Revestimientos, instalación y montaje para una cocina lista para usar.",
+sFloor:"Suelos",sFloorT:"Parquet, laminado, cerámica y terrazo, colocados y nivelados.",sFloor2:"Laminado",sFloor3:"Cerámica",sFloor4:"Terrazo",sFac:"Fachadas y trabajos en altura",sFacT:"Reparación y mantenimiento de fachadas, chimeneas y elementos exteriores.",
+rfTag:"Impermeabilización paso a paso",rfTitle:"Antes de que la gotera llegue al techo de abajo.",rfText:"Así trabajamos una cubierta, como lo mostramos en nuestras obras reales.",p1n:"Parte 1",p1:"Retirada y preparación",p1t:"Levantamos el pavimento dañado, revisamos el soporte y dejamos la base limpia.",p2n:"Parte 2",p2:"Tela asfáltica",p2t:"Colocamos la membrana impermeable con solapes y remates en petos y chimeneas.",p3n:"Parte 3 · final",p3:"Acabado",p3t:"Pavimento nuevo y cubierta lista para usar y para aguantar la lluvia.",rfNote:"¿Manchas de humedad en el techo o filtraciones desde la terraza? Envíanos fotos por WhatsApp y te decimos qué necesita.",
+obTag:"Obras recientes",obTitle:"Calidad que se ve.",obText:"Trabajos reales de nuestro equipo en Barcelona. Más en nuestro Instagram.",gHall:"Pasillo · suelo hidráulico",gSign:"Nuestra firma en obra",gKit:"Cocina",gWood:"Suelo de madera",gRoom:"Parquet en espiga",gTerr:"Terrazo pulido",gTerrace:"Terraza",gFac:"HN en la calle",
+auTag:"Para quién trabajamos",auTitle:"Una obra bien hecha, sea cual sea su tamaño.",a1:"Particulares",a1t:"Tu piso, tu baño o tu terraza, con un presupuesto claro antes de empezar.",a1a:"Reformas de baño y cocina",a1b:"Suelos y pintura",a1c:"Terrazas privadas",a2:"Comunidades y administradores de fincas",a2t:"Cubiertas, fachadas y zonas comunes del edificio, con un solo interlocutor.",a2a:"Impermeabilización de cubiertas",a2b:"Fachadas y chimeneas",a2c:"Escaleras y portales",a3:"Locales y negocios",a3t:"Adecuación de locales y oficinas para abrir o renovar tu espacio.",a3a:"Reforma de locales",a3b:"Suelos y revestimientos",a3c:"Baños y office",
+hwTag:"Cómo trabajamos",hwTitle:"Sin sorpresas, de la primera foto a la entrega.",w1:"Nos escribes",w1t:"Por WhatsApp o teléfono. Si puedes, envía fotos de la zona.",w2:"Visita y medición",w2t:"Vemos la obra, medimos y te explicamos qué hace falta.",w3:"Presupuesto claro",w3t:"Partidas, materiales y plazos, para que decidas con calma.",w4:"Obra y entrega",w4t:"Ejecutamos y te entregamos la obra limpia y terminada.",
+qTag:"Presupuesto",qTitle:"Cuéntanos tu obra.",qText:"Rellena cuatro datos y se abrirá WhatsApp con tu mensaje listo. Allí puedes adjuntar fotos.",qCall:"¿Prefieres llamar?",
+fType:"¿Qué necesitas?",fName:"Nombre",fZone:"Zona o barrio",fZonePh:"Ej.: Gràcia, Badalona...",fDet:"Describe la obra",fOpt:"opcional",fDetPh:"Metros aproximados, estado actual, cuándo te gustaría empezar...",fSend:"Enviar por WhatsApp",fNote:"Consejo: después de enviar, adjunta 2 o 3 fotos de la zona. Así el presupuesto es más preciso.",
+tRoof:"Cubierta",tTerrace:"Terraza",tFull:"Reforma integral",tBath:"Baño",tKit:"Cocina",tFloor:"Suelos",tFac:"Fachada",tOther:"Otro",
+mHi:"Hola, HN Construcciones. Quiero pedir un presupuesto.",mType:"Obra",mName:"Nombre",mZone:"Zona",mDet:"Detalles",stNeed:"Elige el tipo de obra.",
+fqTag:"Preguntas frecuentes",fqTitle:"Lo que suelen preguntarnos.",q1:"¿Cómo pido un presupuesto?",a1q:"Escríbenos por WhatsApp o llama al 658 911 503. Cuéntanos qué necesitas y, si puedes, envía fotos. Después concretamos una visita.",q2:"¿En qué zonas trabajáis?",a2q:"Trabajamos en Barcelona y alrededores. Si tu obra está más lejos, pregúntanos.",q3:"¿Cuánto tarda una impermeabilización?",a3q:"Depende de los metros y del estado de la cubierta. Te indicamos el plazo en el presupuesto, antes de empezar.",q4:"¿Hacéis reformas completas o solo partes?",a4q:"Las dos cosas: desde un baño o un suelo hasta la reforma integral del piso, y obras en edificios para comunidades.",
+fAbout:"Grupo Hélio Nil Construcciones y Reformas, S.L. Calidad que se ve, compromiso que se siente.",fContact:"Contacto",fServ:"Servicios",fServ3:"Baños y cocinas",
+altBath:"Baño reformado con azulejo verde, mueble de madera y suelo hidráulico blanco y negro",altMem:"Cubierta impermeabilizada con tela asfáltica",altSun:"Terraza con suelo cerámico terminado al atardecer",altWorker:"Operario trabajando en una cubierta junto a una chimenea",altHall:"Pasillo con suelo hidráulico blanco y negro",altSign:"Rótulo de HN Construcciones en una fachada",altKit:"Cocina blanca reformada",altWood:"Suelo laminado de madera recién colocado",altRoom:"Habitación con parquet en espiga",altTerr:"Pasillo con suelo de terrazo pulido",altTerrace:"Terraza con baldosa cerámica y plantas",altFac:"Fachada con rótulos de HN Construcciones",
+title:"HN Construcciones · Reformas e impermeabilización en Barcelona"},
+ca:{nServ:"Serveis",nObras:"Obres",nHow:"Com treballem",nFaq:"Preguntes",ctaWorks:"Veure obres",acRoof:"Impermeabilització",acRoofT:"Terrats, cobertes i terrasses",lHall:"Terra hidràulic",acQuote:"<i></i>Qualitat que es veu, <em>compromís que se sent.</em>",acWa:"Pressupost per WhatsApp",acFull:"Reformes integrals",acFullT:"Pisos, banys i cuines",sFoot:"Barcelona i rodalies",mq1:"Impermeabilització",mq2:"Reformes integrals",mq3:"Banys",mq4:"Cuines",mq5:"Terres",mq6:"Façanes",mq7:"Pressupost per WhatsApp",abKick:"Qui som",ab1:"Una constructora de Barcelona dedicada a",ab2:"reformes ben fetes",ab3:"i",ab4:"terrats sense goteres.",b2a:"Construcciones y Reformas, S.L. Un equip propi per a tota l'obra.",b2bK:"La nostra manera de treballar",b2bQ:"“Qualitat que es veu, compromís que se sent.”",b2bS:"El lema d'HN a cada obra",b2cK:"Especialitat",b2cT:"Impermeabilització de terrats i cobertes",b2cD:"Tela asfàltica, remats als ampits i paviment nou.",b2dK:"Atenció per WhatsApp",skip:"Salta al contingut",hTag:"Construccions i reformes · Barcelona",hT1:"Reformes i impermeabilització",hT2:"fetes per durar.",hSub:"Cobertes, terrasses, banys, cuines, terres i reformes integrals a Barcelona. Explica'ns la teva obra i et preparem el pressupost.",
+cta:"Demanar pressupost",ctaCall:"Trucar ara",v1:"Qualitat que es veu",v2:"Compromís que se sent",v3:"Confiança",lBath:"Reforma de bany",lMem:"Impermeabilització",lSun:"Terrassa",cotaH:"Obra real · HN",
+st1:"<b>Cobertes i terrasses</b> impermeabilitzades",st2:"<b>Reformes integrals</b> de pisos",st3:"<b>Pressupost</b> per WhatsApp",st4:"<b>Barcelona</b> i rodalies",
+svTag:"Què fem",svTitle:"De la coberta a l'última rajola.",svText:"Un sol equip per a tota l'obra: impermeabilització, paleta, acabats i reformes completes.",chipMain:"Especialitat",
+sRoof:"Impermeabilització de cobertes i terrasses",sRoofS:"Impermeabilització",sRoofT:"Retirem el paviment antic, col·loquem tela asfàltica i deixem la coberta llesta per a anys sense filtracions.",sRoof1:"Cobertes planes",sRoof2:"Terrasses",sRoof3:"Tela asfàltica",sRoof4:"Paviment nou",
+sFull:"Reformes integrals",sFullT:"El pis complet, de l'enderroc a l'entrega, amb un únic responsable.",sFull1:"Distribució",sFull2:"Paleta",sFull3:"Acabats",
+sBath:"Banys",sBathT:"Enrajolat, terra, sanitaris i moble. Banys actuals i fàcils de netejar.",sKit:"Cuines",sKitT:"Revestiments, instal·lació i muntatge per a una cuina llesta per fer servir.",
+sFloor:"Terres",sFloorT:"Parquet, laminat, ceràmica i terratzo, col·locats i anivellats.",sFloor2:"Laminat",sFloor3:"Ceràmica",sFloor4:"Terratzo",sFac:"Façanes i treballs en alçada",sFacT:"Reparació i manteniment de façanes, xemeneies i elements exteriors.",
+rfTag:"Impermeabilització pas a pas",rfTitle:"Abans que la gotera arribi al sostre de sota.",rfText:"Així treballem una coberta, tal com ho mostrem a les nostres obres reals.",p1n:"Part 1",p1:"Retirada i preparació",p1t:"Aixequem el paviment malmès, revisem el suport i deixem la base neta.",p2n:"Part 2",p2:"Tela asfàltica",p2t:"Col·loquem la membrana impermeable amb solapes i remats als ampits i xemeneies.",p3n:"Part 3 · final",p3:"Acabat",p3t:"Paviment nou i coberta llesta per fer servir i per aguantar la pluja.",rfNote:"Taques d'humitat al sostre o filtracions des de la terrassa? Envia'ns fotos per WhatsApp i et diem què necessita.",
+obTag:"Obres recents",obTitle:"Qualitat que es veu.",obText:"Treballs reals del nostre equip a Barcelona. Més al nostre Instagram.",gHall:"Passadís · terra hidràulic",gSign:"La nostra firma a l'obra",gKit:"Cuina",gWood:"Terra de fusta",gRoom:"Parquet d'espiga",gTerr:"Terratzo polit",gTerrace:"Terrassa",gFac:"HN al carrer",
+auTag:"Per a qui treballem",auTitle:"Una obra ben feta, sigui quina sigui la mida.",a1:"Particulars",a1t:"El teu pis, el teu bany o la teva terrassa, amb un pressupost clar abans de començar.",a1a:"Reformes de bany i cuina",a1b:"Terres i pintura",a1c:"Terrasses privades",a2:"Comunitats i administradors de finques",a2t:"Cobertes, façanes i zones comunes de l'edifici, amb un sol interlocutor.",a2a:"Impermeabilització de cobertes",a2b:"Façanes i xemeneies",a2c:"Escales i vestíbuls",a3:"Locals i negocis",a3t:"Adequació de locals i oficines per obrir o renovar el teu espai.",a3a:"Reforma de locals",a3b:"Terres i revestiments",a3c:"Banys i office",
+hwTag:"Com treballem",hwTitle:"Sense sorpreses, de la primera foto a l'entrega.",w1:"Ens escrius",w1t:"Per WhatsApp o telèfon. Si pots, envia fotos de la zona.",w2:"Visita i mesura",w2t:"Veiem l'obra, mesurem i t'expliquem què cal fer.",w3:"Pressupost clar",w3t:"Partides, materials i terminis, perquè decideixis amb calma.",w4:"Obra i entrega",w4t:"Executem i t'entreguem l'obra neta i acabada.",
+qTag:"Pressupost",qTitle:"Explica'ns la teva obra.",qText:"Omple quatre dades i s'obrirà WhatsApp amb el teu missatge a punt. Allà pots adjuntar fotos.",qCall:"Prefereixes trucar?",
+fType:"Què necessites?",fName:"Nom",fZone:"Zona o barri",fZonePh:"Ex.: Gràcia, Badalona...",fDet:"Descriu l'obra",fOpt:"opcional",fDetPh:"Metres aproximats, estat actual, quan t'agradaria començar...",fSend:"Enviar per WhatsApp",fNote:"Consell: després d'enviar, adjunta 2 o 3 fotos de la zona. Així el pressupost és més precís.",
+tRoof:"Coberta",tTerrace:"Terrassa",tFull:"Reforma integral",tBath:"Bany",tKit:"Cuina",tFloor:"Terres",tFac:"Façana",tOther:"Altres",
+mHi:"Hola, HN Construcciones. Vull demanar un pressupost.",mType:"Obra",mName:"Nom",mZone:"Zona",mDet:"Detalls",stNeed:"Tria el tipus d'obra.",
+fqTag:"Preguntes freqüents",fqTitle:"El que ens solen preguntar.",q1:"Com demano un pressupost?",a1q:"Escriu-nos per WhatsApp o truca al 658 911 503. Explica'ns què necessites i, si pots, envia fotos. Després concretem una visita.",q2:"A quines zones treballeu?",a2q:"Treballem a Barcelona i rodalies. Si la teva obra és més lluny, pregunta'ns.",q3:"Quant triga una impermeabilització?",a3q:"Depèn dels metres i de l'estat de la coberta. T'indiquem el termini al pressupost, abans de començar.",q4:"Feu reformes completes o només parts?",a4q:"Les dues coses: des d'un bany o un terra fins a la reforma integral del pis, i obres en edificis per a comunitats.",
+fAbout:"Grupo Hélio Nil Construcciones y Reformas, S.L. Qualitat que es veu, compromís que se sent.",fContact:"Contacte",fServ:"Serveis",fServ3:"Banys i cuines",
+altBath:"Bany reformat amb rajola verda, moble de fusta i terra hidràulic blanc i negre",altMem:"Coberta impermeabilitzada amb tela asfàltica",altSun:"Terrassa amb terra ceràmic acabat al capvespre",altWorker:"Operari treballant en una coberta al costat d'una xemeneia",altHall:"Passadís amb terra hidràulic blanc i negre",altSign:"Rètol d'HN Construcciones en una façana",altKit:"Cuina blanca reformada",altWood:"Terra laminat de fusta acabat de col·locar",altRoom:"Habitació amb parquet d'espiga",altTerr:"Passadís amb terra de terratzo polit",altTerrace:"Terrassa amb rajola ceràmica i plantes",altFac:"Façana amb rètols d'HN Construcciones",
+title:"HN Construcciones · Reformes i impermeabilització a Barcelona"},
+en:{nServ:"Services",nObras:"Work",nHow:"How we work",nFaq:"FAQ",ctaWorks:"See our work",acRoof:"Waterproofing",acRoofT:"Roof terraces, roofs and terraces",lHall:"Encaustic floor",acQuote:"<i></i>Quality you can see, <em>commitment you can feel.</em>",acWa:"Quote on WhatsApp",acFull:"Full renovations",acFullT:"Flats, bathrooms and kitchens",sFoot:"Barcelona and surroundings",mq1:"Waterproofing",mq2:"Full renovations",mq3:"Bathrooms",mq4:"Kitchens",mq5:"Floors",mq6:"Facades",mq7:"Quotes on WhatsApp",abKick:"About us",ab1:"A Barcelona builder dedicated to",ab2:"renovations done right",ab3:"and",ab4:"roofs that don't leak.",b2a:"Construcciones y Reformas, S.L. Our own team for the whole job.",b2bK:"How we work",b2bQ:"“Quality you can see, commitment you can feel.”",b2bS:"HN's motto on every job",b2cK:"Specialty",b2cT:"Waterproofing of roof terraces and roofs",b2cD:"Asphalt membrane, sealed parapets and new paving.",b2dK:"Support on WhatsApp",skip:"Skip to content",hTag:"Construction & renovation · Barcelona",hT1:"Renovation and waterproofing",hT2:"built to last.",hSub:"Roofs, terraces, bathrooms, kitchens, floors and full renovations in Barcelona. Tell us about your project and we'll prepare a quote.",
+cta:"Get a quote",ctaCall:"Call now",v1:"Quality you can see",v2:"Commitment you can feel",v3:"Trust",lBath:"Bathroom renovation",lMem:"Waterproofing",lSun:"Terrace",cotaH:"Real project · HN",
+st1:"<b>Roofs and terraces</b> waterproofed",st2:"<b>Full renovations</b> of flats",st3:"<b>Quotes</b> on WhatsApp",st4:"<b>Barcelona</b> and surroundings",
+svTag:"What we do",svTitle:"From the roof to the last tile.",svText:"One team for the whole job: waterproofing, masonry, finishes and full renovations.",chipMain:"Specialty",
+sRoof:"Roof and terrace waterproofing",sRoofS:"Waterproofing",sRoofT:"We remove the old paving, lay an asphalt membrane and leave the roof ready for years without leaks.",sRoof1:"Flat roofs",sRoof2:"Terraces",sRoof3:"Asphalt membrane",sRoof4:"New paving",
+sFull:"Full renovations",sFullT:"The whole flat, from demolition to handover, with one person in charge.",sFull1:"Layout",sFull2:"Masonry",sFull3:"Finishes",
+sBath:"Bathrooms",sBathT:"Tiling, flooring, fixtures and vanity. Modern bathrooms that are easy to clean.",sKit:"Kitchens",sKitT:"Wall finishes, installation and assembly for a kitchen ready to use.",
+sFloor:"Floors",sFloorT:"Parquet, laminate, ceramic and terrazzo, laid and levelled.",sFloor2:"Laminate",sFloor3:"Ceramic",sFloor4:"Terrazzo",sFac:"Facades and work at height",sFacT:"Repair and maintenance of facades, chimneys and exterior elements.",
+rfTag:"Waterproofing step by step",rfTitle:"Before the leak reaches the ceiling below.",rfText:"This is how we work on a roof, as shown in our real projects.",p1n:"Part 1",p1:"Removal and prep",p1t:"We lift the damaged paving, check the base and leave it clean.",p2n:"Part 2",p2:"Asphalt membrane",p2t:"We lay the waterproof membrane with overlaps and sealed edges at walls and chimneys.",p3n:"Part 3 · final",p3:"Finish",p3t:"New paving and a roof ready to use and to stand up to the rain.",rfNote:"Damp stains on the ceiling or leaks from the terrace? Send us photos on WhatsApp and we'll tell you what it needs.",
+obTag:"Recent work",obTitle:"Quality you can see.",obText:"Real work by our team in Barcelona. More on our Instagram.",gHall:"Hallway · encaustic tiles",gSign:"Our name on site",gKit:"Kitchen",gWood:"Wood flooring",gRoom:"Herringbone parquet",gTerr:"Polished terrazzo",gTerrace:"Terrace",gFac:"HN on the street",
+auTag:"Who we work for",auTitle:"A job done right, whatever its size.",a1:"Homeowners",a1t:"Your flat, bathroom or terrace, with a clear quote before we start.",a1a:"Bathroom and kitchen renovations",a1b:"Floors and painting",a1c:"Private terraces",a2:"Communities and property managers",a2t:"Roofs, facades and common areas of the building, with one point of contact.",a2a:"Roof waterproofing",a2b:"Facades and chimneys",a2c:"Stairs and entrances",a3:"Shops and businesses",a3t:"Fit-outs for shops and offices, to open or refresh your space.",a3a:"Shop renovations",a3b:"Floors and wall finishes",a3c:"Restrooms and kitchenettes",
+hwTag:"How we work",hwTitle:"No surprises, from the first photo to handover.",w1:"You message us",w1t:"On WhatsApp or by phone. If you can, send photos of the area.",w2:"Visit and measuring",w2t:"We see the site, measure and explain what's needed.",w3:"Clear quote",w3t:"Items, materials and timing, so you can decide calmly.",w4:"Work and handover",w4t:"We carry out the work and hand it over clean and finished.",
+qTag:"Quote",qTitle:"Tell us about your project.",qText:"Fill in four details and WhatsApp opens with your message ready. You can attach photos there.",qCall:"Prefer to call?",
+fType:"What do you need?",fName:"Name",fZone:"Area or neighbourhood",fZonePh:"e.g. Gràcia, Badalona...",fDet:"Describe the job",fOpt:"optional",fDetPh:"Approximate size, current condition, when you'd like to start...",fSend:"Send on WhatsApp",fNote:"Tip: after sending, attach 2 or 3 photos of the area for a more accurate quote.",
+tRoof:"Roof",tTerrace:"Terrace",tFull:"Full renovation",tBath:"Bathroom",tKit:"Kitchen",tFloor:"Floors",tFac:"Facade",tOther:"Other",
+mHi:"Hello, HN Construcciones. I'd like to request a quote.",mType:"Job",mName:"Name",mZone:"Area",mDet:"Details",stNeed:"Choose the type of job.",
+fqTag:"FAQ",fqTitle:"What people usually ask us.",q1:"How do I get a quote?",a1q:"Message us on WhatsApp or call 658 911 503. Tell us what you need and, if you can, send photos. Then we arrange a visit.",q2:"Which areas do you cover?",a2q:"We work in Barcelona and the surrounding area. If your project is further away, just ask.",q3:"How long does waterproofing take?",a3q:"It depends on the size and condition of the roof. We give you the timeline in the quote, before we start.",q4:"Do you do full renovations or just parts?",a4q:"Both: from a bathroom or a floor to a full flat renovation, plus building work for residents' communities.",
+fAbout:"Grupo Hélio Nil Construcciones y Reformas, S.L. Quality you can see, commitment you can feel.",fContact:"Contact",fServ:"Services",fServ3:"Bathrooms and kitchens",
+altBath:"Renovated bathroom with green tiles, wooden vanity and black and white encaustic floor",altMem:"Roof waterproofed with asphalt membrane",altSun:"Finished terrace with ceramic tiles at sunset",altWorker:"Worker on a roof next to a chimney",altHall:"Hallway with black and white encaustic tiles",altSign:"HN Construcciones sign on a facade",altKit:"Renovated white kitchen",altWood:"Newly laid wood laminate floor",altRoom:"Room with herringbone parquet",altTerr:"Hallway with polished terrazzo floor",altTerrace:"Terrace with ceramic tiles and plants",altFac:"Facade with HN Construcciones signs",
+title:"HN Construcciones · Renovation and waterproofing in Barcelona"}
+};
+const $=s=>document.querySelector(s);
+document.querySelectorAll("[data-dup]").forEach(i=>{const o=document.querySelector(`[data-key="${i.dataset.dup}"]`);if(o)i.src=o.src});
+let lang="es";
+try{const s=localStorage.getItem("hn-lang");if(s&&T[s])lang=s;else{const n=(navigator.language||"").toLowerCase();if(n.startsWith("ca"))lang="ca";else if(n.startsWith("en"))lang="en"}}catch(e){}
+const chips=$("#chips");
+TYPES.forEach(k=>{const l=document.createElement("label");l.innerHTML=`<input type="checkbox" name="type" value="${k}"><span data-i18n="${k}"></span>`;chips.appendChild(l)});
+function setLang(l){
+  lang=l;const d=T[l];
+  document.documentElement.lang=l;
+  document.querySelectorAll("[data-i18n]").forEach(e=>{const k=e.dataset.i18n;if(d[k]!=null)e.textContent=d[k]});
+  document.querySelectorAll("[data-i18n-html]").forEach(e=>{const k=e.dataset.i18nHtml;if(d[k]!=null)e.innerHTML=d[k]});
+  document.querySelectorAll("[data-i18n-alt]").forEach(e=>{const k=e.dataset.i18nAlt;if(d[k])e.alt=d[k]});
+  document.querySelectorAll("[data-i18n-ph]").forEach(e=>{const k=e.dataset.i18nPh;if(d[k])e.placeholder=d[k]});
+  document.querySelectorAll("[data-lang]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===l));
+  document.title=d.title;$("#status").textContent="";$("#status").className="status";
+  try{localStorage.setItem("hn-lang",l)}catch(e){}
+}
+document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
+setLang(lang);
+function msg(){
+  const d=T[lang],types=[...document.querySelectorAll("input[name=type]:checked")].map(i=>d[i.value]);
+  const v=id=>$("#"+id).value.trim();
+  const L=[d.mHi,"",`${d.mType}: ${types.join(", ")||"—"}`];
+  if(v("name"))L.push(`${d.mName}: ${v("name")}`);
+  if(v("zone"))L.push(`${d.mZone}: ${v("zone")}`);
+  if(v("det"))L.push(`${d.mDet}: ${v("det")}`);
+  return{m:L.join("\n"),ok:types.length>0};
+}
+$("#qform").addEventListener("submit",e=>{
+  e.preventDefault();const {m,ok}=msg();
+  if(!ok){const s=$("#status");s.textContent=T[lang].stNeed;s.className="status err";chips.querySelector("input").focus();return}
+  $("#status").textContent="";window.open(`https://wa.me/${WA}?text=${encodeURIComponent(m)}`,"_blank","noopener");
+});
+
+/* arc */
+(function(){
+  const arc=document.getElementById("arc");if(!arc)return;
+  const cards=[...arc.children],n=cards.length,mid=(n-1)/2;
+  const rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function place(open){
+    const w=arc.clientWidth,mob=w<640;
+    const R=mob?w*1.05:Math.min(1250,w*.86),step=mob?19:11.5;
+    cards.forEach((c,i)=>{
+      const a=open?(i-mid)*step:0,r=a*Math.PI/180;
+      const x=R*Math.sin(r),z=R*(Math.cos(r)-1);
+      const y=open?Math.abs(i-mid)*-4:40;
+      c.style.transform=`translate(-50%,-50%) translate3d(${x.toFixed(1)}px,${y}px,${z.toFixed(1)}px) rotateY(${(-a).toFixed(2)}deg)`;
+      c.style.opacity=open?(Math.abs(i-mid)>4.5?.0:1):0;
+      c.style.zIndex=String(100-Math.round(Math.abs(i-mid)*10));
+    });
+  }
+  if(rm){place(true)}else{place(false);requestAnimationFrame(()=>setTimeout(()=>place(true),120))}
+  let t;addEventListener("resize",()=>{clearTimeout(t);t=setTimeout(()=>place(true),120)});
+})();
+const rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const els=document.querySelectorAll(".rv");
+if(rm||!("IntersectionObserver" in window))els.forEach(e=>e.classList.add("in"));
+else{const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.1,rootMargin:"0px 0px -6% 0px"});els.forEach(e=>io.observe(e))}
+const dock=$("#dock"),hero=$("#top"),q=$("#presupuesto");
+function dk(){const r=q.getBoundingClientRect();dock.classList.toggle("on",scrollY>hero.offsetHeight*.6&&!(r.top<innerHeight&&r.bottom>0))}
+addEventListener("scroll",dk,{passive:true});dk();
+</script>
+</body>
+</html>
